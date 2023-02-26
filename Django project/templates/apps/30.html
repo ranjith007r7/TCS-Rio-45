@@ -1,0 +1,38 @@
+{% extends 'apps/index.html'%}
+{% block body_block %}
+
+<html>
+<head>
+	<title> ENQUIRY INFORMATION </title>
+</head>
+<body>
+	<center>
+		<h1> ENQUIRY INFORMATION </h1>
+		{% if s %}
+		<table border=5px;>
+			<thead>
+				<th>NO</th>
+				<th>NAME</th>
+				<th>MOBILE</th>
+				<th>CITY</th>
+				<th>COURSE</th>
+				
+				<!--<th>Actions</th-->			</thead>
+			{% for i in s %}
+			<tr>
+				<td>{{i.no}}</td>
+				<td>{{i.name | title}}</td>
+				<td>{{i.mobile}}</td>
+				<td>{{i.city}}</td>
+				<td>{{i.course}}</td>
+				<!--<td><a href="/update/{{i.id}}">Update</a>|<a href="/delete/{{i.id}}">Delete</a></td>-->
+			</tr>
+			{% endfor %}
+		</table>
+		{% else %}
+		<p> NO records found </p>
+		{% endif %}
+	</center>
+</body>
+{% endblock %}
+</html>
