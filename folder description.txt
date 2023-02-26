@@ -1,0 +1,14 @@
+7 different types of captcha implementation were done
+
+1. The folder Simple captcha is a basic web page with a captcha with a signup option added.
+
+2. The folder captcha is a simple captcha generator using java.
+
+3. The file captcha is a simple captcha generator using python.
+
+4. The Django project is a web page created using Django-python. In this, you have to click the menubar -->update there I have added the captcha function to update values.
+
+5. The following folder is Django project1 also the same web page created using Django-python. In this, you just have to click the signup tag and proceed from there I have added a captcha console wherever required.
+
+6. The next folder is an Image Captcha in which a simple image-blurred captcha is created to prevent bots not to identify the underlying characters.
+7. The last folder is the Arithmetic Captcha which involves basic arithmetic functions to pass the captcha case.
