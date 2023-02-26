@@ -1,0 +1,13 @@
+body{
+
+	background: #311465;
+	color: azure;
+	text-align: center;
+}
+img{
+	border: solid 5px ;
+	border-color: #a6fffe;
+	width: 20%;
+	height: 20%;
+}
+/* css comment*/

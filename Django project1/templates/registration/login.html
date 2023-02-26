@@ -1,0 +1,65 @@
+{%extends 'apps/index.html'%}
+{%block body_block%}
+<center>
+	<h3>LOGIN PAGE</h3>
+	<form method="POST">
+		{{form.as_p}}
+		{%csrf_token%}
+					<label>Enter Captcha:</label>
+      <div class="form-row">
+        <div class="form-group col-md-1">
+          <input type="text" class="form-control" readonly id="capt">
+        </div>
+        <div class="form-group col-md-1">
+          <input type="text" class="form-control" id="textinput">
+        </div>
+      </div>
+  <div class="form-group">
+        <button onclick="validcap()" class="btn btn-lg btn-success btn-block">Submit</button>
+      </div>
+      <div class="form-group">
+        <button type="button" class="btn btn-danger">
+        <input type="reset"></button>
+      </div>
+    </form>
+    <h6>Captcha not visible <img src="refresh.jpg" width="40px" onclick="cap()"></h6>
+    
+  </div>
+</div>
+</div>
+<script type="text/javascript">
+  function cap(){
+    var alpha = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V'
+                 ,'W','X','Y','Z','1','2','3','4','5','6','7','8','9','0','a','b','c','d','e','f','g','h','i',
+                 'j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z', '!','@','#','$','%','^','&','*','+'];
+                 var a = alpha[Math.floor(Math.random()*71)];
+                 var b = alpha[Math.floor(Math.random()*71)];
+                 var c = alpha[Math.floor(Math.random()*71)];
+                 var d = alpha[Math.floor(Math.random()*71)];
+                 var e = alpha[Math.floor(Math.random()*71)];
+                 var f = alpha[Math.floor(Math.random()*71)];
+
+                 var final = a+b+c+d+e+f;
+                 document.getElementById("capt").value=final;
+               }
+               function validcap(){
+                var str1 = document.getElementById('capt').value;
+                var str2 = document.getElementById('textinput').value;
+                if(str1==str2){
+                  alert("Captcha Verfication successful");
+                  return true;
+                }else{
+                  alert("Please enter a valid captcha");
+                  return false;
+                }
+               }
+            
+
+
+               
+</script>
+		<button type="submit">Login</button>
+	</form>
+	<a href="registration/signup">REGISTER HERE</a>
+</center>
+{%endblock%}

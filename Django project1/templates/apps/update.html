@@ -1,0 +1,27 @@
+{% extends 'apps/index.html' %}
+{%block body_block %}
+<html>
+<head>
+	<title>UPDATE INFORMATION</title>
+</head>
+<center>
+	<body>
+		<h2>Update Student Information</h2>
+		<form method="POST">
+			{%csrf_token%}
+			Student No: <input type="text" name="sno" value="{{s.sno}}"><br>
+			Student Name: <input type="text" name="sname" value="{{s.sname}}"><br>
+			Student Salary: <input type="text" name="ssalary" value="{{s.ssalary}}"><br>
+			Student Address: <input type="text" name="saddress" value="{{s.saddress}}"><br>
+
+			<input type="submit" name="UPDATE RECORD">
+			
+
+
+
+	</body>
+</center>
+</form>
+</body>
+{%endblock%}
+</html>
